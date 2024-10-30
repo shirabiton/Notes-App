@@ -34,7 +34,7 @@ const CardList = () => {
       .catch((e) => console.error(e.message));
   };
 
-  const getCardRequest = async (id) => {
+  const getCardByIdRequest = async (id) => {
     try {
       const response = await axios.get(`http://localhost:5000/get-card/${id}`);
       console.log(response.data);
@@ -54,13 +54,13 @@ const CardList = () => {
     }
   };
 
+  // Close insert mode when clicking on the page background
   const closeAddCardHandle = (event) => {
-    // אם היעד של האירוע לא נמצא בתוך אלמנט li
     if (!event.target.closest("li")) {
-      // alert("hi");
       setIsOpenAddCard(false);
     }
   };
+
   const addCardRequest = (newCard) => {
     axios
       .post(`http://localhost:5000/add-card`, newCard)
@@ -72,7 +72,7 @@ const CardList = () => {
   };
 
   const setCardColor = async (cardId, color) => {
-    let card = await getCardRequest(cardId);
+    let card = await getCardByIdRequest(cardId);
     let updatedCard = { text: card.text, color: color };
     setOpenColorSwitchId(-1);
     updateCardRequest(cardId, updatedCard);
