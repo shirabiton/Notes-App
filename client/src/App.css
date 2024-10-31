@@ -2,3 +2,7 @@ body {
   background-color: #212121;
   padding-bottom: 5vh;
 }
+
+.iconify {
+  cursor: pointer;
+}

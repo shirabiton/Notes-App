@@ -8,39 +8,25 @@
   justify-content: center;
 }
 
-.single-card {
-  color: white;
+.list-item {
+  display: flex;
+  flex-direction: column;
   border: 2px solid white;
-  font-size: 3vh;
   list-style-type: none;
   width: 23vw;
   height: 25vh;
-  display: flex;
-  flex-direction: column;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.iconify {
-  cursor: pointer;
-}
-
-#plus-icn {
-  color: #adadad;
-  font-size: 5vh;
-  list-style-type: none;
-  display: flex;
-  justify-self: center;
-  align-items: center;
-}
-
-.single-card p {
+.list-item p {
   position: absolute;
+  margin: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin: 0;
+  font-size: 3vh;
   color: white;
   text-align: center;
 }
@@ -51,9 +37,10 @@
   margin-top: auto;
   margin-bottom: 5px;
   align-items: flex-end;
+  color: white;
 }
 
-.color-switch-icn {
+.color-change-icn {
   width: 40px;
   height: 40px;
   margin-left: 10px;
@@ -65,11 +52,42 @@
   margin-right: 10px;
 }
 
-.color-switch {
+.text-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: white;
+  text-align: center;
+  background-color: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 3vh;
+  border: none;
+  text-align: center;
+  width: 95%;
+}
+
+.text-input:focus {
+  outline: none;
+}
+
+.color-palette {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: auto;
   background-color: white;
   padding: 3px 0;
+}
+
+#plus-icn {
+  color: #adadad;
+  font-size: 5vh;
+  list-style-type: none;
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
